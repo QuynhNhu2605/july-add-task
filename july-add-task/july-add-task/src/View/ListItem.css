@@ -1,0 +1,90 @@
+.list{
+    color: #fff;
+    width: 353px;
+    margin: auto;
+    margin-bottom: 16px;
+    height: 50px;
+    background-color: #bf07ac;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+}
+.list p{
+    position: relative;
+    transition: ease-in-out;
+}
+.list p input{
+    background-color: transparent;
+    border: 0;
+    color: #fff;
+    font-size: 18px;
+}
+.list p input:focus{
+    outline: none;
+}
+.list p span{
+    position: absolute;
+    right: -15px;
+    top: 2px;
+}
+
+.list button{
+    height: 20px;
+    width: 100px;
+    border-radius: 5px;
+    border: 0;
+    background-color:rgb(151, 225, 61); 
+    cursor: pointer;
+    margin-right: 10px;
+}
+.faicons{
+    margin: 0 5px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.itemsAnim-enter{
+    opacity: 0.01;
+}
+.itemsAnim-enter .itemsAnim-enter-active{
+    opacity: 1;
+    transition: opacity 300ms ease-in
+}
+.itemsAnim-leave{
+    opacity: 1;
+}
+.itemsAnim-leave .itemsAnim-leave-active{
+    opacity: 0.01;
+    transition: opacity 300ms ease-in
+}
+.bottom{
+    height: 10px;
+}
+.infor-tasks{
+    position: relative;
+}
+.detail-tasks{
+    position: absolute;
+    background-color: #bebeff;
+    width: 300px;
+    top: -16px;
+    left: 100%;
+}
+.detail-header{
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 700;
+}
+.detail-infor{
+    margin-left: 16px;
+    display: flex;
+}
+.detail-content{
+    margin-left: 10px;
+}
+.detail-content p{
+    font-weight: 400;
+}
+.detail-title p{
+    font-weight: 500;
+}
