@@ -66,7 +66,7 @@ function App() {
                     <button type="submit" onClick={Add}>Add</button>
                 </form>
                 <p></p>
-                <ListItems items={tasks} Update={Update} Delete={Delete}  />
+                <ListItems items={tasks} Update={Update} Delete={Delete} />
             </header>
         </div>
     );

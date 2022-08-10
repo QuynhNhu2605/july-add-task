@@ -6,9 +6,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 function ListItem(props) {
     const items = props.items;
     const [detail, setDetail] = useState();
-    useEffect(() =>{
+    useEffect(() => {
         setDetail();
-    },[items])
+    }, [items])
     function viewDetail(key) {
         items.map(item => {
             if (item.key === key) {
@@ -17,8 +17,8 @@ function ListItem(props) {
                         <div className='detail-header'><p>Detail Task</p></div>
                         <div className='detail-infor'>
                             <div className='detail-title'>
-                                <p>name </p>
-                                <p>description </p>
+                                <p>Name </p>
+                                <p>Description </p>
                             </div>
                             <div className='detail-content'>
                                 <p>{item.name}</p>
@@ -44,7 +44,7 @@ function ListItem(props) {
                             }} />
                             <span>
                                 <FontAwesomeIcon className="faicons" icon="trash"
-                                    onClick={() => {window.confirm('Are you sure?',)&& props.Delete(item.key) }} />
+                                    onClick={() => { window.confirm('Are you sure?',) && props.Delete(item.key) }} />
                             </span>
                             <button type="submit" onClick={() => { viewDetail(item.key) }}>View Detail</button>
                         </p>
