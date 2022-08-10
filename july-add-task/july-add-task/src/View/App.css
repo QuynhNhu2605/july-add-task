@@ -1,9 +1,9 @@
 body {
-  background-color: #9266ff;
+  background-color: #d9d5e3;
 }
 
 .App {
-  background-color: #3f3160;
+  background-color: rgb(40, 72, 82);
   min-height: 500px;
   width: 400px;
   margin: 40px auto;
@@ -29,7 +29,7 @@ textarea {
 #to-do-form label{
   margin-left: 23px;
   font-size: 19px;
-  color: #23b0ff;
+  color: #ffffff;
 }
 #to-do-form input {
   height: 50px;
@@ -52,14 +52,22 @@ textarea:focus {
   outline: none;
 }
 
+#to-do-form h1 {
+  text-align: center;
+  padding: auto;
+  margin-left: 30%;
+  color: rgb(255, 255, 255);
+}
+
 #to-do-form button {
   height: 50px;
   width: 80px;
   border-radius: 5px;
   border: 0;
-  background-color: rgba(202, 156, 24, 1);
+  background-color: rgba(27, 112, 137, 1);
+  color: #fff;
   cursor: pointer;
-  margin-top: 200px;
+  margin-top: 250px;
   margin-right: 50px;
 }
 

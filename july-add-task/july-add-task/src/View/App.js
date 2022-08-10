@@ -57,9 +57,10 @@ function App() {
             <header>
                 <form id="to-do-form" >
                     <div>
-                        <label >name : </label>
+                        <h1>Add Task</h1>
+                        <label >Name : </label>
                         <input name='name' id='name' type="text" placeholder="Enter task" ></input>
-                        <label >description : </label>
+                        <label >Description : </label>
                         <textarea id='desctiption' name='desctiption' placeholder='Enter description'></textarea>
                     </div>
                     <button type="submit" onClick={Add}>Add</button>
