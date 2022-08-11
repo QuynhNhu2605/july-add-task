@@ -9,6 +9,10 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^28.1.6",
+    "@types/node": "^18.7.1",
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
     "axios": "^0.24.0",
     "react": "^18.2.0",
     "react-confirm-alert": "^3.0.6",
@@ -21,7 +25,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "tsc": "tsc"
   },
   "eslintConfig": {
     "extends": [
@@ -29,6 +34,9 @@
       "react-app/jest"
     ]
   },
+
+  
+
   "browserslist": {
     "production": [
       ">0.2%",
@@ -40,5 +48,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "typescript": "^4.7.4"
   }
 }

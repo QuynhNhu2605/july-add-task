@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-
-import ListItems from './ListItem'
+// @ts-ignore
+import ListItems from './ListItem.tsx'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
 import './App.css';
@@ -9,18 +9,24 @@ library.add(faTrash)
 
 function App() {
     const [tasks, setTasks] = useState([]);
+
     useEffect(() => {
         const data = localStorage.getItem('tasks');
+
         if (data) {
             setTasks(JSON.parse(data));
         }
     }, []);
-    function Add(e) {
-        e.preventDefault();
+
+    function Add() {
+       
         const form = document.querySelector('#to-do-form');
-        const inputName = form.querySelector('[name="name"]').value;
-        const inputDescription = form.querySelector('[name="desctiption"]').value;
+        const inputName = (form.querySelector('[name="name"]')as HTMLInputElement).value;
+        
+        const inputDescription = (form.querySelector('[name="desctiption"]')as HTMLInputElement).value;
+
         if (inputName === '' || inputDescription === '') return;
+
         const task = [
             ...tasks,
             {
@@ -28,16 +34,18 @@ function App() {
                 name: inputName,
                 description: inputDescription
             }]
+
         localStorage.setItem('tasks', JSON.stringify(task));
         setTasks(JSON.parse(localStorage.getItem('tasks')));
     }
-    function Delete(key) {
+
+    function Delete(key: any) {
         var newTasks = tasks.filter((task) => task.key !== key);
         localStorage.setItem('tasks', JSON.stringify(newTasks));
         setTasks(newTasks)
     }
 
-    function Update(text, key) {
+    function Update(text: any, key: any) {
         const newTasks = tasks.map(task => {
             if (key === task.key) {
                 return {
@@ -48,6 +56,7 @@ function App() {
             }
             return task;
         })
+
         localStorage.setItem('tasks', JSON.stringify(newTasks));
         setTasks(newTasks)
     }

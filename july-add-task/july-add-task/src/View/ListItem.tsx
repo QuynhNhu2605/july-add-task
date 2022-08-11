@@ -3,14 +3,14 @@ import { confirmAlert } from 'react-confirm-alert';
 import React, { useEffect, useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-function ListItem(props) {
+function ListItem(props:any) {
     const items = props.items;
-    const [detail, setDetail] = useState();
+    const [detail, setDetail] = useState(items);
     useEffect(() => {
-        setDetail();
+        setDetail(detail);
     }, [items])
-    function viewDetail(key) {
-        items.map(item => {
+    function viewDetail(key: any) {
+        items.map((item: { key: any; name: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal; description: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal; }) => {
             if (item.key === key) {
                 setDetail(
                     <div>
@@ -35,13 +35,14 @@ function ListItem(props) {
 
     return <div className="infor-tasks">
         <div>
-            {items.map((item) => (
+            {items.map((item: { key: React.Key; name: string | number | readonly string[]; }) => (
                 <div key={item.key}>
                     <div className="list" >
                         <p>
-                            <input type="text" value={item.name} onChange={(e) => {
+                            <label><input type="text" value={item.name} onChange={(e) => {
                                 props.Update(e.target.value, item.key)
                             }} />
+                            </label>
                             <span>
                                 <FontAwesomeIcon className="faicons" icon="trash"
                                     onClick={() => { window.confirm('Are you sure?',) && props.Delete(item.key) }} />
