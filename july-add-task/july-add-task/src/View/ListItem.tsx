@@ -9,6 +9,19 @@ function ListItem(props:any) {
     useEffect(() => {
         setDetail(detail);
     }, [items])
+<<<<<<< Updated upstream
+=======
+
+    function checkBox(key: any){
+        if(document.querySelector('.checkbox:checked') !== null){
+            keyDelete[keyDelete.length]=(key);
+            console.log(keyDelete);
+        }
+        
+
+    }
+
+>>>>>>> Stashed changes
     function viewDetail(key: any) {
         items.map((item: { key: any; name: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal; description: string | number | boolean | React.ReactElement<any, string | React.JSXElementConstructor<any>> | React.ReactFragment | React.ReactPortal; }) => {
             if (item.key === key) {
